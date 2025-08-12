@@ -1,3 +1,6 @@
+        "scripts": {
+            "build": "vite build"
+        }
 {
   "name": "mindmate",
   "private": true,
