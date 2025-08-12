@@ -4,10 +4,6 @@
 import { GoogleGenAI, Type, Content } from "@google/genai";
 import { Mood, type ChatHistoryRow, type MoodsRow, type MoodEnum, type WeeklyInsightReport } from '../types';
 
-// This tells Vercel to use the Edge runtime, which is optimal for streaming.
-export const config = {
-  runtime: 'edge',
-};
 
 // This is the main system instruction that defines MindMate's personality and boundaries.
 const systemInstruction = `You are MindMate. Your persona is that of a supportive, understanding, and non-judgmental older brother or best friend. You're the person someone talks to because they feel safe and comfortable with you. You listen, you get it, and you don't judge.
