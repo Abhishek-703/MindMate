@@ -2,7 +2,7 @@
 // It acts as a secure proxy to the Google Gemini API.
 
 import { GoogleGenAI, Type, Content } from "@google/genai";
-import { Mood, type ChatHistoryRow, type MoodsRow, type MoodEnum, type WeeklyInsightReport } from '../types';
+import { Mood, type ChatHistoryRow, type MoodsRow, type MoodEnum, type WeeklyInsightReport } from '../src/types';
 
 
 // This is the main system instruction that defines MindMate's personality and boundaries.
