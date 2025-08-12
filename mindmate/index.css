@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* Hot Purple theme (Welcome) */
+    --bg-hot-purple-start: #FFFFFF;
+    --bg-hot-purple-end: #9333ea;
+    /* Lush Green theme (Home) */
+    --bg-peach-start: #dcfce7;
+    --bg-peach-end: #86efac;
+    /* Cool/Purple theme (Chat) */
+    --bg-cool-start: #FFFFFF;
+    --bg-cool-end: #CDBBFF;
+    /* Mood/Blue theme (Mood) */
+    --bg-mood-start: #EBF5FF;
+    --bg-mood-end: #B0D7FF;
+    /* Resources/Green theme (Resources) */
+    --bg-resources-start: #E6FAF2;
+    --bg-resources-end: #A7F3D0;
+
+    --text-primary: #1F2937;
+    --text-secondary: #374151;
+    --text-on-brand: #FFFFFF;
+    
+    --card-bg: rgba(255, 255, 255, 0.15);
+    --card-border: rgba(255, 255, 255, 0.4);
+    --input-bg: rgba(255, 255, 255, 0.15);
+    
+    --brand-primary: #8A63D2;
+    --brand-primary-rgb: 138, 99, 210;
+    --brand-primary-hover: #7C58BB;
+    --brand-primary-glass: rgba(138, 99, 210, 0.2);
+
+    --profile-bg: rgba(255, 255, 255, 0.2);
+    --profile-card-bg: rgba(255, 255, 255, 0.15);
+    --profile-border: rgba(255, 255, 255, 0.4);
+  }
+
+  .dark {
+    /* Hot Purple theme (Welcome) */
+    --bg-hot-purple-start: #12091c;
+    --bg-hot-purple-end: #6a1ca9;
+    /* Lush Green theme (Home) */
+    --bg-peach-start: #01120f;
+    --bg-peach-end: #00584d;
+    /* Cool/Purple theme (Chat) */
+    --bg-cool-start: #0f0b1a;
+    --bg-cool-end: #3e2874;
+    /* Mood/Blue theme (Mood) */
+    --bg-mood-start: #080d13;
+    --bg-mood-end: #213148;
+    /* Resources/Green theme (Resources) */
+    --bg-resources-start: #07110c;
+    --bg-resources-end: #203c2e;
+
+    --text-primary: #F3F4F6;
+    --text-secondary: #9CA3AF;
+    --text-on-brand: #FFFFFF;
+    
+    --card-bg: rgba(30, 30, 30, 0.15);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --input-bg: rgba(55, 65, 81, 0.15);
+
+    --brand-primary: #A78BFA;
+    --brand-primary-rgb: 167, 139, 250;
+    --brand-primary-hover: #C4B5FD;
+    --brand-primary-glass: rgba(167, 139, 250, 0.15);
+
+    --profile-bg: rgba(17, 24, 39, 0.2);
+    --profile-card-bg: rgba(31, 41, 55, 0.15);
+    --profile-border: rgba(255, 255, 255, 0.1);
+  }
+
+  body {
+    background-color: #111827; /* Dark gray background */
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+  }
+
+  .gradient-bg-hot-purple {
+    background: linear-gradient(180deg, var(--bg-hot-purple-start) 0%, var(--bg-hot-purple-end) 100%);
+  }
+  .gradient-bg-peach {
+    background: linear-gradient(180deg, var(--bg-peach-start) 0%, var(--bg-peach-end) 100%);
+  }
+  .dark .gradient-bg-peach {
+    background: linear-gradient(180deg, var(--bg-peach-start) 0%, var(--bg-peach-end) 100%);
+  }
+  .gradient-bg-cool {
+     background: linear-gradient(180deg, var(--bg-cool-start) 0%, var(--bg-cool-end) 100%);
+  }
+  .gradient-bg-mood {
+    background: linear-gradient(180deg, var(--bg-mood-start) 0%, var(--bg-mood-end) 100%);
+  }
+  .gradient-bg-resources {
+    background: linear-gradient(180deg, var(--bg-resources-start) 0%, var(--bg-resources-end) 100%);
+  }
+
+  .glass-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  }
+  
+  .pill-button {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .pill-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+   .dark .pill-button:hover {
+    background-color: rgba(50, 50, 50, 0.3);
+  }
+  .pill-tag {
+    display: inline-block;
+    padding: 0.375rem 1rem; /* py-1.5 px-4 */
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 600; /* font-semibold */
+    letter-spacing: 0.1em; /* tracking-widest */
+    white-space: nowrap;
+    border-radius: 9999px; /* rounded-full */
+    background-color: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--card-border);
+  }
+  .pill-button:disabled, .primary-button:disabled {
+     opacity: 0.6;
+     cursor: not-allowed;
+     transform: none;
+  }
+  
+  .primary-button {
+    background-color: var(--brand-primary);
+    color: var(--text-on-brand);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+  }
+  .primary-button:hover {
+    background-color: var(--brand-primary-hover);
+    transform: translateY(-2px);
+  }
+  .dark .primary-button {
+     box-shadow: 0 4px 14px 0 rgba(167, 139, 250, 0.15);
+  }
+
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scroll-snap-stop-always {
+    scroll-snap-stop: always;
+  }
+
+  /* Card Flip Animation */
+  .card-flipper {
+    perspective: 1500px;
+  }
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transform-style: preserve-3d;
+  }
+  .card-flipper.is-flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-back {
+    transform: rotateY(180deg);
+  }
+
+  .floating-button-hover {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  .floating-button-hover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(var(--brand-primary-rgb), 0.25), 0 8px 10px -6px rgba(var(--brand-primary-rgb), 0.2);
+  }
